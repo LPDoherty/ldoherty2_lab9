@@ -2,22 +2,23 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.ico">
-  <title>Carl Flint</title>
-  <!-- Output stylesheet from webpack config -->
-  <link rel="stylesheet" type="text/css" href="public/build/home-style.css">
+  <title>A Leaflet map!</title>
+  <!-- Prebuilt Leaflet css -->
+  <link rel="stylesheet" href="./src/Leaflet-1.2.0/leaflet.css" />
+  <!-- Custom css -->
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <!-- Leaflet Core JS  -->
+  <script src="./src/Leaflet-1.2.0/leaflet.js"></script>
 </head>
+
 <body>
-  <div id="wrapper"></div>
-  
-  <!-- single page app in bundle.js -->
-  <script type="text/javascript" src="public/build/vendor-bundle.js"></script>
-  <script type="text/javascript" src="public/build/home-bundle.js"></script>
+
+  <div id="map"></div>
+  <!-- Load javascript file for US Census data -->
+  <script type="text/javascript" src="./public/json/states.js"></script>
+  <!-- Load custom javascript file for leaflet map -->
+  <script type="text/javascript" src="./src/js/leafletChoropleth.js"></script>
+
 </body>
 
 </html>
