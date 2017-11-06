@@ -6,7 +6,7 @@ var map = L.map('map').setView(coords, zoom); // put it all together
 
 ////////////////////////////////////////////////////////////////////////////////
 // load a basemap tile layer
-L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'), {
   maxZoom: 18,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Data by <a href="https://cdflint.github.io/">Carl Flint</a>'
 }).addTo(map);
@@ -31,14 +31,14 @@ info.addTo(map);
 
 ////////////////////////////////////////////////////////////////////////////////
 // get color depending on population density value
-function getColor(d) {
-  return d > 1000 ? '#800026' :
-    d > 500 ? '#BD0026' :
-    d > 200 ? '#E31A1C' :
-    d > 100 ? '#FC4E2A' :
-    d > 50 ? '#FD8D3C' :
-    d > 20 ? '#FEB24C' :
-    d > 10 ? '#FED976' :
+function getColor("Total Population") {
+  return "Total Population" = 0 ? '#800026' :
+    "Total Population" > 100000 ? '#BD0026' :
+    "Total Population" > 50000 ? '#E31A1C' :
+    "Total Population" > 100 ? '#FC4E2A' :
+    "Total Population" > 50 ? '#FD8D3C' :
+    "Total Population" > 20 ? '#FEB24C' :
+    "Total Population" > 10 ? '#FED976' :
     '#FFEDA0';
 }
 // set color of the json based on its Population Density
