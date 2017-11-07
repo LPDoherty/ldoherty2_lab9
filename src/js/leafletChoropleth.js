@@ -49,7 +49,7 @@ function style(feature) {
     color: 'white',
     dashArray: '3',
     fillOpacity: 0.7,
-    fillColor: getColor(feature.properties.density)
+    fillColor: getColor(feature.properties.TotalPopulation)
   };
 }
 // highlightFeature function
